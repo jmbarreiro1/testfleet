@@ -9,7 +9,6 @@ spec:
   branch: main
   paths:
     - regional-level-norte
-  helmSecretName: oci-helm-secret
   targets:
     - clusterSelector:
         matchLabels:
