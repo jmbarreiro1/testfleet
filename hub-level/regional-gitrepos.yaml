@@ -1,13 +1,13 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: regional-norte-configurator
+  name: fleet-hub-bootstrap
   namespace: fleet-local
 spec:
   # Apunta al servidor Gitea local del piloto
   repo: "https://github.com/jmbarreiro1/testfleet.git"
   branch: main
   paths:
-    - regional-level-norte
+    - hub-level
   targets:
     - clusterName: local
