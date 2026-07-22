@@ -10,6 +10,4 @@ spec:
   paths:
     - regional-level-norte
   targets:
-    - clusterSelector:
-        matchLabels:
-          entorno: prueba
+    - clusterName: local
