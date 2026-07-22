@@ -1,0 +1,23 @@
+defaultNamespace: apps-norte
+
+targets:
+  - name: grupo-fabricas-norte
+    clusterSelector:
+      matchLabels:
+        role: regional-shard
+        region: norte
+        tipo: fabrica
+
+# Personalizaciones específicas por ubicación Edge
+targetCustomizations:
+  - name: edge-vigo-values
+    clusterName: local
+    helm:
+      valuesFiles:
+        - sitios-valores/vigo.yaml
+
+  - name: edge-coruna-values
+    clusterName: edge-coruna
+    helm:
+      valuesFiles:
+        - sitios-valores/coruna.yaml

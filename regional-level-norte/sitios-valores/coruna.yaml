@@ -1,0 +1,5 @@
+siteName: "Coruna-Puerto-B"
+ntpServer: "10.60.40.1"
+edgeIP: "10.60.40.10"
+replicas: 1
+envType: "test"

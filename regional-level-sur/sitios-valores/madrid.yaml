@@ -1,0 +1,5 @@
+siteName: "Madrid-Central-C"
+ntpServer: "10.70.10.1"
+edgeIP: "10.70.10.10"
+replicas: 3
+envType: "produccion"

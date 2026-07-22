@@ -1,0 +1,5 @@
+siteName: "Vigo-Fabrica-A"
+ntpServer: "10.50.20.1"
+edgeIP: "10.50.20.10"
+replicas: 2
+envType: "produccion"

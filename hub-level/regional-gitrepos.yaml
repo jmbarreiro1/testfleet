@@ -1,0 +1,35 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: regional-norte-configurator
+  namespace: fleet-local
+spec:
+  # Apunta al servidor Gitea local del piloto
+  repo: "http://10.99.0.13:3000/repsol/repsol-fleet-gitops.git"
+  branch: main
+  paths:
+    - regional-level-norte
+  helmSecretName: oci-helm-secret
+  targets:
+    - clusterSelector:
+        matchLabels:
+          role: regional-shard
+          region: norte
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: regional-sur-configurator
+  namespace: fleet-local
+spec:
+  # Apunta al servidor Gitea local del piloto
+  repo: "http://10.99.0.13:3000/repsol/repsol-fleet-gitops.git"
+  branch: main
+  paths:
+    - regional-level-sur
+  helmSecretName: oci-helm-secret
+  targets:
+    - clusterSelector:
+        matchLabels:
+          role: regional-shard
+          region: sur

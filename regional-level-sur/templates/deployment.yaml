@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-generic-app
+  labels:
+    site: {{ .Values.siteName | quote }}
+    env: {{ .Values.envType | quote }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: my-generic-app
+  template:
+    metadata:
+      labels:
+        app: my-generic-app
+    spec:
+      containers:
+      - name: web
+        image: {{ .Values.image }}
+        env:
+        - name: SITE_NAME
+          value: {{ .Values.siteName | quote }}
+        - name: NTP_SERVER
+          value: {{ .Values.ntpServer | quote }}
+        - name: EDGE_IP
+          value: {{ .Values.edgeIP | quote }}
+        ports:
+        - containerPort: 80

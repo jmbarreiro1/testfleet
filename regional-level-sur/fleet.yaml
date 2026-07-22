@@ -1,0 +1,17 @@
+defaultNamespace: apps-sur
+
+targets:
+  - name: grupo-fabricas-sur
+    clusterSelector:
+      matchLabels:
+        role: regional-shard
+        region: sur
+        tipo: fabrica
+
+# Personalizaciones específicas por ubicación Edge
+targetCustomizations:
+  - name: edge-madrid-values
+    clusterName: local
+    helm:
+      valuesFiles:
+        - sitios-valores/madrid.yaml

@@ -1,0 +1,4 @@
+defaultNamespace: fleet-default
+helm:
+  timeout: "5m"
+  force: true
