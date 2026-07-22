@@ -5,7 +5,7 @@ metadata:
   namespace: fleet-local
 spec:
   # Apunta al servidor Gitea local del piloto
-  repo: "http://10.99.0.13:3000/repsol/repsol-fleet-gitops.git"
+  repo: "https://github.com/jmbarreiro1/testfleet.git"
   branch: main
   paths:
     - regional-level-norte
