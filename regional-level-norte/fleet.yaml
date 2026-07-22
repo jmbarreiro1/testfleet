@@ -4,9 +4,7 @@ targets:
   - name: grupo-fabricas-norte
     clusterSelector:
       matchLabels:
-        role: regional-shard
-        region: norte
-        tipo: fabrica
+        entorno: prueba
 
 # Personalizaciones específicas por ubicación Edge
 targetCustomizations:
