@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-regional-sur
+  namespace: apps-sur
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-sur
+  template:
+    metadata:
+      labels:
+        app: app-sur
+    spec:
+      containers:
+      - name: app
+        image: nginx:nonexistent-tag-99999

@@ -11,3 +11,17 @@ spec:
     - regional-level-norte
   targets:
     - clusterName: local
+
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: regional-sur-configurator
+  namespace: fleet-local
+spec:
+  repo: "https://github.com/jmbarreiro1/testfleet.git"
+  branch: main
+  paths:
+    - regional-level-sur
+  targets:
+    - clusterName: local
