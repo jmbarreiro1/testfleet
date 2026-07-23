@@ -1,6 +1,6 @@
 siteName: "Generic-Site"
 ntpServer: "8.8.8.8"
 edgeIP: "127.0.0.1"
-replicas: 1
+replicas: 2
 envType: "dev"
 image: "nginx:alpine"
